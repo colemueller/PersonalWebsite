@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Cole Mueller</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/animations.css" media="all">
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="js/main.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body style="display:none" onload="init()">
+    <div id="_NAV" class="sticky">
+      <div id="intro" onclick="navTo('top')">
+        <h1>Cole Mueller</h1>
+        <h3>Interactive Software Developer</h2>
+        <h3><a href="mailto:coleaaronmueller@gmail.com">coleaaronmueller@gmail.com</a></h3>
+      </div>
+      <section id="menu">
+        <div class="nav box" onclick="navTo('about')">
+          <h2>About</h2>
+        </div>
+        <div class="nav box" onclick="navTo('services')">
+          <h2>Skills</h2>
+        </div>
+        <div class="nav box" onclick="navTo('portfolio')">
+          <h2>Projects</h2>
+        </div>
+        <div class="nav box" onclick="navTo('contact')">
+          <h2>Contact</h2>
+        </div>
+        <div class="nav box" onclick="navTo('links')">
+          <h2>Links</h2>
+        </div>
+        <a href="ColeMueller_Resume.pdf" target="_blank"><div class="nav box">
+          <h2>Resume</h2>
+        </div></a>
+      </section>
+    </div>
+    <div id="content">
+      <div id="about" class="contentSection">
+        <h2>ABOUT</h2>
+        <p>Welcome! My name is Cole Mueller and I'm an interactive software and web developer based in Virginia. I enjoy working on games, interactive training software, and desktop tools/applications. I graduated from Drexel University in 2018 with a degree in Game Art and Production and a minor in Computer Science. I'm currently with <a href="http://e-gai.com/" target="_blank">Gromelski &amp; Associates, Inc.</a> as a multimedia developer programmer.</p>
+        <p>When I'm not working, I spend my time at the climbing gym, hiking, reading comics, or watching movies. I'd love to discuss projects that I might be a good fit for, so please feel free to <a onclick="navTo('contact')">contact me</a> to chat!</p>
+        <img src="images/me.png" alt="me when my code doesn't work on the first try" title="me when my code doesn't work on the first try">
+        <sub>Drawing by <a href="https://www.jessicanebolsky.com/" target="_blank">Jessica Nebolsky</a></sub>
+      </div>
+      
+      <div id="services" class="contentSection">
+        <h2>SKILLS</h2>
+        <div class="serviceSection">
+          <h3>INTERACTIVE SOFTWARE</h3>
+          <hr />
+          <p>I develop games, development tools, training simulations, and other interactive desktop software using a variety of . I also have experience developing custom tools and macros for automation in Unity, Adobe, and Microsoft Office applications.</p>
+          
+          <ul>
+            <li>Unity / C# / .NET</li>
+            <li>HTML / JS</li>
+            <li>Python</li>
+            <li>Command / Batch / Shell Scripting</li>
+            <li>TypeScript / Visual Basic for Microsoft Office tools</li>
+          </ul>
+        </div>
+        <div class="serviceSection">
+          <h3>WEB DESIGN & DEVELOPMENT</h3>
+          <hr />
+          <p>I am well-versed in developing broswer-based applications using HTML and Javascript. I excel at creating stand-alone tools or building new capabilities into existing software. I also develop hosted content from scratch or with web services such as WordPress.</p>
+
+          <ul>
+            <li>HTML5 / CSS3</li>
+            <li>JavaScript / jQuery</li>
+            <li>Lectora / Moodle E-Learning</li>
+            <li>Embedded multimedia content
+                <ul>
+                  <li>SVG / video</li>
+                  <li>Unity WebGL projects</li>
+                  <li>External JS content</li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="serviceSection">
+          <h3>ART</h3>
+          <hr />
+          <p>I have experience doing small-scale modeling, animation, and graphic design projects. I also have extensive experience with art and animation implementation and usage in Unity.</p>
+          
+          <ul>
+            <li>3D modeling and animation</li>
+            <li>Maya / Unity</li>
+            <li>Image editing using Adobe Photoshop</li>
+            <li>Wireframes and development storyboards</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="portfolio" class="contentSection">
+        <h2>PROJECTS</h2>
+        <table id="portfolioContainer">
+          <tr>
+            <td onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/gaiThumb.png')"><h2>Gromelski & Associates</h2></td>
+            <td onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/knex/knex_5.jpg')"><h2>K'NEX® 3D</h2></td>
+            <td onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/thumbnail.png')"><h2>Groundless</h2></td>
+          </tr>
+          <tr>
+            <td onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/moceanImg.JPG')"><h2>Mocean</h2></td>
+            <td onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/bebris_3.PNG')"><h2>Bebris</h2></td>
+            <td onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/drippyThumb.png')"><h2>Drippy</h2></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="contact" class="contentSection">
+        <h2>CONTACT</h2>
+        <p>Shoot me an email at <a href="mailto:coleaaronmueller@gmail.com">coleaaronmueller@gmail.com</a> or contact me with the form below.</p>
+        <form> 
+          <input type="text" name="name" id="name" placeholder="Your name...">
+          <span id="nameErr"></span>
+          <input type="text" name="email" id="email" placeholder="Your email address...">
+          <span id="emailErr"></span>
+          <textarea name="message" id="message" placeholder="Your message..." style="min-height:100px; max-height: 400px; "></textarea>
+      
+          <button onclick="FormSubmit()" type="button" value="Submit" class="box">Submit</button>
+          <br>
+          <span id="submitReturn"></span>
+        </form>
+      </div>
+
+      <div id="links" class="contentSection">
+        <h2>LINKS</h2>
+        <p>Here are a few other fantastic developers that might better meet your development goals and are over-all just super cool people.</p>
+        <ul>
+          <li><a target="_blank" href="https://www.linkedin.com/in/andrewbishop12/">Andrew Bishop - 3D character rigging</a></li>
+          <li><a target="_blank" href="https://gabrieldavis.format.com/">Gabriel Davis - 3D modeling, surfacing, and lighting</a></li>
+          <li><a target="_blank" href="https://justadog.itch.io/">Taylor Swietanski - game design, programming, prototyping, tech art</a></li>
+          <li><a target="_blank" href="https://joncioletti.com/">Jonathan Cioletti - game and technical art</a></li>
+          <li><a target="_blank" href="https://linktr.ee/lasayloofficial">Bennett (Lasaylo) Mueller - electronic music</a></li>
+          <li><a target="_blank" href="https://shannons.artstation.com/">Shannon Sands - Concept Artist, Storyboard Artist, Animator</a></li>
+        </ul>
+      </div>
+      <footer>
+        © <p id="thisYear">1996</p> Cole Mueller. All Rights Reserved. | <a target="_blank" href="https://www.linkedin.com/in/coleaaronmueller/"><img src="images/linkedInIcon.png"></a> | <div id="easterEgg" onclick="EasterClick()"></div>
+      </footer>
+    </div>
+    
+  </body>
+
+  <div id="portfolioStage" class="sticky" >
+    <h2 class="closeBtn" onclick="PortfolioClose()">close</h2>
+    <div id="portfolioContent" style="display:none;">
+
+      <div class="portfolioDetails" id="gaiDetail" style="display: none;">
+        <div class="portfolioDetailGraphic">
+          <a href="http://e-gai.com/" target="_blank"><img style="width: 100%; height: auto;" src="./portfolio/gaiThumb.png"></a>
+        </div>
+        <div class="portfolioDetailText">
+          <h1>Gromelski & Associates Website</h1>
+          <h2>summer 2019</h2>
+          <p>This project was an update of a legacy site that had flash-dependant features and out-of-date web standards. The updated site was completely rebuilt from the ground up with to adhere to modern web standards and practices.</p>
+          <p>I coded the website from scratch with vanilla html/js and did a first-pass style in css before another team member gave it the final look.</p>
+          <p>Visit the site below. © 2023 Gromelski & Associates, Inc.</p>
+          <button onclick="window.open('http:\/\/e-gai.com/','_blank');" type="button" class="box">Visit e-gai.com</button>
+        </div>
+      </div>
+
+      <div class="portfolioDetails" id="knexDetail" style="display: none;">
+        <div class="portfolioDetailGraphic">
+          <div class="carousel">
+            <img class="spacerImg" src="./portfolio/knex/knex_1.jpg" style="opacity: 0;">
+            <img class="carouselImg" src="./portfolio/knex/knex_1.jpg">
+            <img class="carouselImg" src="./portfolio/knex/knex_2.jpg" style="display: none;">
+            <img class="carouselImg" src="./portfolio/knex/knex_3.jpg" style="display: none;">
+            <img class="carouselImg" src="./portfolio/knex/knex_4.jpg" style="display: none;">
+            <img class="carouselImg" src="./portfolio/knex/knex_5.jpg" style="display: none;">
+            <div id="leftArrow" onclick="carouselGoBack()"><img src="images/leftArrow.png" alt="view previous" width="32"></div>
+            <div id="rightArrow" onclick="carouselGoNext()"><img src="images/rightArrow.png" alt="view next" width="32"></div>
+          </div>
+        </div>
+        <div class="portfolioDetailText">
+          <h1>K'NEX® 3D</h1>
+          <h2>Spring/summer - 2017</h2>
+          <p>K'NEX® 3D was one of my primary projects while I was with K'NEX®. I maintained current product lines and added new products to the app. I also added developer features to streamline the addition and testing of new products and product lines in the app without needing to publish a new version to the Android, iOS, and Amazon app stores.</p>
+          <p>I also developed a prototype for WebGL version of the app to be embedded directly on the K'NEX® website that navigated the user directly to a specific product based on the page being viewed on the K'NEX® website. I developed JavaScript features to communicate with the WEbGL app and customize the Unity WebGL player.</p>
+          <p>Tools:</p>
+          <ul>
+            <li>Unity 3D</li>
+            <li>Autodesk Maya</li>
+            <li>Adobe Photoshop</li>
+            <li>Android / iOS development tools</li>
+            <li>Google Play, Apple App Store, and Amazon Appstore developer tools</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portfolioDetails" id="groundlessDetail" style="display: none;">
+        <div class="portfolioDetailGraphic">
+          <iframe width="1920" height="1080" src="https://www.youtube.com/embed/-I1tsBTXrKw" title="Groundless Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="portfolioDetailText">
+          <h1>GROUNDLESS</h1>
+          <h2>winter 2017 - Fall 2018</h2>
+          <p>"Groundless" is a local multiplayer arena game with no ground! Players compete  by building and destroying the land they walk on.</p>
+          <p>"Groundless" was my senior capstone project and was shown at PAX East in 2018. I worked as one of the lead programmers and game designers. I designed and implemented core gameplay mechanics, as well as many of the effects and shaders. I also implemented many of the backend systems such as local 4-player input, menu navigation, and character animation.</p>
+          <p>"Groundless" is available on Steam, XBOX ONE, and the Windows 10 Store.</p>
+          <p>Tools:</p>
+          <ul>
+            <li>Unity 3D</li>
+            <li>C#</li>
+            <li>Autodesk Maya</li>
+            <li>Adobe Photoshop</li>
+            <li>Audiokinetic Wwise</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portfolioDetails" id="bebrisDetail" style="display: none;">
+        <div class="portfolioDetailGraphic">
+          <iframe src="https://player.vimeo.com/video/279546995?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Bebris_Gameplay"></iframe>
+        </div>
+        <div class="portfolioDetailText">
+          <h1>BEBRIS</h1>
+          <h2>spring 2018</h2>
+          <p>"Bebris" is an arcade spelling game where players spell words using the letters falling down the screen to score points! Download "Bebris" from my Itch.io page below.</p>
+          <button onclick="window.open('https:\/\/colemueller.itch.io/bebris','_blank');" type="button" class="box">Download</button>
+          <p>This was a short-term Unity project completed with two other team members. I developed the grid system that controlled letter spawning, placement, movement, and gravity. I also implemented player input, UI, animation, and effects.</p>
+          <p>Tools:</p>
+          <ul>
+            <li>Unity 2D</li>
+            <li>C#</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portfolioDetails" id="moceanDetail" style="display: none;">
+        <div class="portfolioDetailGraphic">
+          <iframe src="https://player.vimeo.com/video/246833573?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Mocean Gameplay"></iframe>
+        </div>
+        <div class="portfolioDetailText">
+          <h1>MOCEAN</h1>
+          <h2>fall 2017</h2>
+          <p>"Mocean" was a ~3 week project done by myself and 2 team members. This project was a study in graphics programming and technical art implementation methods.</p>
+          <button onclick="window.open('https:\/\/colemueller.itch.io/mocean','_blank');" type="button" class="box">Download</button>
+          <p>This project utilizes GPU instancing, cloth physics, procedural mesh generation, procedural animation through a vertex shader, and more.</p>
+          <p>Tools:</p>
+          <ul>
+            <li>Unity 3D</li>
+            <li>C#</li>
+            <li>Autodesk Maya</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portfolioDetails" id="drippyDetail" style="display: none;">
+        <div class="portfolioDetailGraphic">
+          <iframe src="https://player.vimeo.com/video/581649090?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Drippy Gameplay"></iframe>
+        </div>
+        <div class="portfolioDetailText">
+          <h1>DRIPPY</h1>
+          <h2>in progress</h2>
+          <p>"Drippy" is an <strong>in progress</strong> mobile game project I'm developing with <a href="https://andrewdb.com/" target="_blank">Andrew Bishop</a> in our free time. "Drippy" is an infinite scroller game where players must fall as far as they can while avoiding being flung off the screen by their own tap or one of the many obstacles that they'll find along their fall.</p>
+          <p>I developed gameplay and UI interaction as well as the many of the game systems such as local high scores, player settings, and animation systems. I also created all of the game art and animation in Procreate - a first for me!</p>
+          <!-- <button onclick="window.open('https:\/\/colemueller.itch.io/mocean','_blank');" type="button" class="box">Download</button> -->
+          <!-- <p>"Drippy" is expected to launch for phones and tablets on the Apple AppStore and the Google Play Store.</p> -->
+          <p>Tools:</p>
+          <ul>
+            <li>Unity 2D</li>
+            <li>C#</li>
+            <li>Procreate</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="easterContainer" class="sticky">
+    <div id="easterStage" style="display:none;">
+      <h2 class="closeBtn" onclick="EasterClose()">close</h2>
+      <p id="attribution">SFX by <a href="https://opengameart.org/users/subspaceaudio" target="_blank">SubspaceAudio</a>. <br>Music by <a href="https://opengameart.org/users/codemanu" target="_blank">CodeManu</a>.<br><a href="https://creativecommons.org/licenses/by/3.0/legalcode" target="_blank">CC BY 3.0 License</a></p>
+    </div>
+  </div>
+
+</html>
