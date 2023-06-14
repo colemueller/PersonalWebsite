@@ -58,7 +58,7 @@ a:hover
     /* background: rgb(50, 50, 50); */
     background: rgb(0,0,0);
     background: linear-gradient(135deg, rgb(101, 111, 128) 0%, rgb(0, 14, 47) 100%);
-    font-size:10pt;
+    font-size:.8rem;
 }
 
 #intro
@@ -83,7 +83,7 @@ a:hover
     margin:2rem 1rem;
     display: inline-block;
     vertical-align: middle;
-    font-size:8pt;
+    font-size:.65rem;
 }
 
 .nav a
@@ -162,7 +162,7 @@ a:hover
     color: #00bf00 !important;
 }
 
-.contentSection p
+#about p
 {
     margin-top:2em;
     width:50%;
@@ -190,24 +190,36 @@ a:hover
 #portfolioContainer
 {
     width: 100%;
-    display: table;
+    /* display: table;
     table-layout: fixed;
     border-collapse:separate;
-    border-spacing:4em 4em;
+    border-spacing:4em 4em; */
+}
+
+.portfolioRow
+{
+    width: 100%;
+    display: flex;
 }
 
 .portfolioBox
 {
     position: relative;
+    display: inherit;
     height: 250px;
-    display: table-cell !important;
-    /* border:2px solid red; */
     text-align: center;
-    
+    width: 30%;
+    margin: 2rem 2rem;
     background-color: rgba(0,0,0,0.9);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
+}
+
+.portfolioBox h2
+{
+    position: relative;
+    margin: auto;
 }
 
 .noMouse
@@ -243,6 +255,7 @@ a:hover
     left: 0;
     -webkit-transition: all 0.3s cubic-bezier(.63,2,.42,.58);
     transition: all 0.3s cubic-bezier(.63,2,.42,.58);
+    overflow-y: scroll;
 }
 
 .closeBtn
@@ -597,30 +610,29 @@ button
     width: 10px;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: black; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(185, 185, 185); 
-    border-radius: 5px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: white; 
-  }
+/* Track */
+::-webkit-scrollbar-track {
+background: black; 
+}
 
-  .scroller {
-    overflow-y: scroll;
-    scrollbar-color: #0A4C95 #C2D2E4;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgb(185, 185, 185); 
+border-radius: 5px;
+}
 
-  @media screen and (max-width: 1516px)
-  {
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
 
+.scroller {
+overflow-y: scroll;
+scrollbar-color: #0A4C95 #C2D2E4;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1516px)
+{
     .portfolioDetails
     {
         top:0 !important;
@@ -655,7 +667,61 @@ button
         vertical-align: middle;
         font-size:8pt;
     }
-    
-  }
+
+    #easterEgg
+    {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px)
+{
+    .contentSection
+    {
+        width: 82%;
+        max-width: 82%;
+        min-width: 82%;
+    }
+
+    #about p
+    {
+        margin-top:2em;
+        width:100%;
+    }
+
+    #about img
+    {
+        position: relative;
+        max-height: auto;
+        max-width: 100%;
+        width: auto;
+        top:0;
+        right:0;
+        transform: none;
+        -webkit-transform: none;
+    }
+
+    .serviceSection
+    {
+        display: inherit;
+        padding: 4em 1em 0px 1em;
+    }
+
+    .portfolioRow
+    {
+        display: inherit;
+    }
+
+    .portfolioBox
+    {
+        width: calc(100% - 4rem);
+    }
+
+    .portfolioBox h2
+    {
+        top: calc(50% - 30px);
+    }
+}
   
   
