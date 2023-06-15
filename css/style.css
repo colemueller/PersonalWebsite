@@ -59,6 +59,7 @@ a:hover
     background: rgb(0,0,0);
     background: linear-gradient(135deg, rgb(101, 111, 128) 0%, rgb(0, 14, 47) 100%);
     font-size:.8rem;
+    transform-style: preserve-3d;
 }
 
 #intro
@@ -89,6 +90,11 @@ a:hover
 .nav a
 {
     text-decoration: none;
+}
+
+#dropdown
+{
+    display: none;
 }
 
 #menu
@@ -631,8 +637,21 @@ overflow-y: scroll;
 scrollbar-color: #0A4C95 #C2D2E4;
 }
 
-@media screen and (min-width: 0px) and (max-width: 1516px)
+@media screen and (min-width: 0px) and (max-width: 1300px)
 {
+    #easterEgg
+    {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1080px)
+{
+    #menu
+    {
+        display: none;
+    }
+
     .portfolioDetails
     {
         top:0 !important;
@@ -668,20 +687,67 @@ scrollbar-color: #0A4C95 #C2D2E4;
         font-size:8pt;
     }
 
-    #easterEgg
+    #dropdown
     {
-        display: none;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
     }
 
+    #dropbtn
+    {
+        background: transparent;
+        font-size: 2rem;
+        padding: 1rem;
+        top: .4rem;
+        position: absolute;
+        right: 1rem;
+        cursor: pointer;
+    }
+
+    .myDropdown
+    {
+        position: absolute;
+        width: 100%;
+        top:100%;
+        background: #000000ba;
+        transform: translate3d(0px, -100%, -10px);
+        -webkit-transition: all 0.4s cubic-bezier(.47,1.58,.52,.73);
+        transition: all 0.4s cubic-bezier(.47,1.58,.52,.73);
+    }
+
+    .showDropdown
+    {
+        transform: translate3d(0px, 0%, -10px);
+    }
+
+    .myDropdown a
+    {
+        display: block;
+        padding: 1.2rem 1.25rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 480px)
 {
+    #intro
+    {
+        display: block;
+        width: max-content;
+        margin: .5rem .5rem;
+    }
+
     .contentSection
     {
-        width: 82%;
-        max-width: 82%;
-        min-width: 82%;
+        width: 80%;
+        max-width: 80%;
+        min-width: 80%;
     }
 
     #about p
@@ -705,7 +771,7 @@ scrollbar-color: #0A4C95 #C2D2E4;
     .serviceSection
     {
         display: inherit;
-        padding: 4em 1em 0px 1em;
+        padding: 4em 0em 0px 0em;
     }
 
     .portfolioRow

@@ -8,6 +8,8 @@ var carouselImgs;
 var carouselCurrImg;
 var bugsplatFrame;
 var request;
+var dropdown;
+var dropBtn;
 
 function init()
 {
@@ -19,6 +21,8 @@ function init()
     easterContainer = doc.getElementById("easterContainer");
     easterStage = doc.getElementById("easterStage");
     portfolioStage = doc.getElementById("portfolioStage");
+    dropdown = doc.getElementsByClassName("myDropdown")[0];
+    dropBtn = doc.getElementById("dropbtn");
     doc.body.style.scrollBehavior = "smooth";
     $("body").fadeIn(3000);
     ClearForm();
@@ -162,6 +166,13 @@ function navTo(el)
         left:0,
         behavior: 'smooth'
     });
+
+    const tmpStyle = getComputedStyle(dropdown.parentElement);
+    const dVal = tmpStyle.display;
+    if(dVal == "block")
+    {
+        toggleMenu();
+    }
 }
 
 function ClearForm()
@@ -334,4 +345,18 @@ function carouselGoBack()
     setTimeout(function(){
         $(carouselImgs[carouselCurrImg]).fadeIn(500);
     }, 300);
+}
+
+function toggleMenu()
+{
+    if(dropdown.classList.contains("showDropdown"))
+    {
+        dropdown.classList.remove("showDropdown");
+        dropBtn.innerHTML = "☰";
+    }
+    else
+    {
+        dropdown.classList.add("showDropdown");
+        dropBtn.innerHTML = "✕";
+    }
 }
