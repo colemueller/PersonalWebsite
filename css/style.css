@@ -745,9 +745,11 @@ scrollbar-color: #0A4C95 #C2D2E4;
 
     .contentSection
     {
-        width: 80%;
-        max-width: 80%;
-        min-width: 80%;
+        width: 75%;
+        max-width: 75%;
+        min-width: 75%;
+        background-color: rgba(0,0,0,0.25);
+        border: none;
     }
 
     #about p
@@ -781,7 +783,8 @@ scrollbar-color: #0A4C95 #C2D2E4;
 
     .portfolioBox
     {
-        width: calc(100% - 4rem);
+        width: calc(100% - 2rem);
+        margin: 2rem 1rem;
     }
 
     .portfolioBox h2
