@@ -231,8 +231,8 @@ function FormSubmit()
         submitReturn.innerHTML = "Thank you for the message! I'll get back to you as soon as I can.";
         request = $.ajax({
             type: "POST",
-            url: "/contact.php",
-            data: { d_name: name, d_email: email, d_msg: message }
+            url: "contact.php",
+            data: { name: name, email: email, message: message }
         });
         
         request.done(function (response, textStatus, jqXHR){

@@ -1,8 +1,8 @@
 <?php
 
-    $name = $_POST['d_name'];
-    $email = $_POST['d_email'];
-    $message = $_POST['d_msg'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
     
     $emailto = 'coleaaronmueller@gmail.com';
     $toname = 'Cole Mueller';
