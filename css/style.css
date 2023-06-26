@@ -92,6 +92,11 @@ a:hover
     text-decoration: none;
 }
 
+.nav h2
+{
+    pointer-events: none;
+}
+
 #dropdown
 {
     display: none;

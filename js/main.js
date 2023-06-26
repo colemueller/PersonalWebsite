@@ -142,6 +142,7 @@ function PortfolioClose()
         //portfolioStage.style = "display:none;";
         content = doc.getElementById("portfolioContent");
         $(content).fadeOut(100);
+        pauseAllVideos();
         setTimeout(function(){
             
             /* clickObj.classList.remove("noMouse");
@@ -359,4 +360,14 @@ function toggleMenu()
         dropdown.classList.add("showDropdown");
         dropBtn.innerHTML = "✕";
     }
+}
+
+function pauseAllVideos() 
+{ 
+    const videos = doc.querySelectorAll('iframe');
+    videos.forEach(i => {
+        const source = i.src
+        i.src = ''
+        i.src = source
+     });
 }
