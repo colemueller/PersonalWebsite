@@ -25,7 +25,7 @@ function init()
     dropBtn = doc.getElementById("dropbtn");
     doc.body.style.scrollBehavior = "smooth";
     $("body").fadeIn(3000);
-    ClearForm();
+    //ClearForm();
 
     carouselImgs = doc.getElementsByClassName("carouselImg");
     carouselCurrImg = 0;
@@ -176,7 +176,7 @@ function navTo(el)
     }
 }
 
-function ClearForm()
+/* function ClearForm()
 {
     doc.getElementById("name").value = "";
     doc.getElementById("email").value = "";
@@ -294,7 +294,7 @@ function ValidateName(n)
     var nameRe = /^[a-zA-Z-' ]*$/;
 
     return nameRe.test(testName);
-}
+} */
 
 function SetIframeHeight(obj)
 {
