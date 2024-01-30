@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script src="js/main.js"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
   </head>
   <body style="display:none" onload="init()">
     <div id="_NAV" class="sticky">
@@ -125,6 +126,9 @@
             <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/moceanImg.JPG')"><h2>Mocean</h2></div>
             <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/bebris_3.PNG')"><h2>Bebris</h2></div>
             <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/drippyThumb.png')"><h2>Drippy</h2></div>
+          </div>
+          <div class="portfolioRow">
+            <div onclick="PortfolioClick(this)" class="portfolioMiscBox smallBox" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/musicRoom/FinalRender_1.jpg')"><h2>Miscellaneous</h2></div>
           </div>
         </div>
       </div>
@@ -287,6 +291,29 @@
           </ul>
           <button onclick="window.open('https://cole-mueller.com/Drippy/', '_self');" type="button" class="box">Learn More</button>
         </div>
+      </div>
+
+      <div class="portfolioDetails" id="miscDetail" style="display: none;">
+        <grid id="miscGrid">
+          <figure>
+            <a href="./portfolio/misc/Drippy_Idle_Animation.gif">
+              <img style="width: 100%; height: auto;" src="./portfolio/misc/Drippy_Idle_Animation.gif" alt="Drippy Idle Animation">
+            </a>
+            <figcaption style="color:white;">Drippy Idle Animation - Aseprite</figcaption>
+          </figure>
+          <figure>
+            <a href="./portfolio/misc/Drippy_Walk_Animation.gif">
+              <img style="width: 100%; height: auto;" src="./portfolio/misc/Drippy_Walk_Animation.gif" alt="Drippy Walk Animation">
+            </a>
+            <figcaption style="color:white;">Drippy Walk Animation - Aseprite</figcaption>
+          </figure>
+          <figure>
+            <a href="./portfolio/misc/Music_Room.jpg">
+              <img style="width: 100%; height: auto;" src="./portfolio/misc/Music_Room.jpg" alt="Music Room Render">
+            </a>
+            <figcaption style="color:white;">Music Room Render - Maya, V-Ray</figcaption>
+          </figure>
+        </grid>
       </div>
 
     </div>

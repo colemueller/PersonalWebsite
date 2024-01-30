@@ -228,7 +228,21 @@ a:hover
     background-size:cover;
 }
 
-.portfolioBox h2
+.portfolioMiscBox
+{
+    position: relative;
+    display: inherit;
+    height: 250px;
+    text-align: center;
+    width: 100%;
+    margin: 2rem 2rem;
+    background-color: rgba(0,0,0,0.9);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.portfolioBox h2, .portfolioMiscBox h2
 {
     position: relative;
     margin: auto;
@@ -320,6 +334,12 @@ a:hover
     border-radius: 5px; */
     overflow:hidden;
 }
+
+#miscGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+  }
 
 .carousel
 {
@@ -455,7 +475,7 @@ footer a, footer div
     pointer-events: auto;
 }
 
-.box 
+.box, .smallBox
 {
     position: relative;
     
@@ -470,7 +490,7 @@ footer a, footer div
     transition: all 0.4s cubic-bezier(.63,2,.42,.58);
 }
 
-.box::after 
+.box::after, .smallBox::after 
 {
     content: "";
     border-radius: 5px;
@@ -498,13 +518,21 @@ footer a, footer div
     cursor: pointer;
 }
 
-.box:active
+.smallBox:hover 
+{
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+
+    cursor: pointer;
+}
+
+.box:active, .smallBox:active
 {
     -webkit-transform: scale(.9, .9);
     transform: scale(.9, .9);
 }
 
-.box:hover::after 
+.box:hover::after, .smallBox:hover::after
 {
     opacity: 1;
 }
@@ -794,13 +822,13 @@ scrollbar-color: #0A4C95 #C2D2E4;
         display: inherit;
     }
 
-    .portfolioBox
+    .portfolioBox, .portfolioMiscBox
     {
         width: calc(100% - 2rem);
         margin: 2rem 1rem;
     }
 
-    .portfolioBox h2
+    .portfolioBox h2, .portfolioMiscBox h2
     {
         top: calc(50% - 30px);
     }
