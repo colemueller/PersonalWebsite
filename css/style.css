@@ -832,6 +832,12 @@ scrollbar-color: #0A4C95 #C2D2E4;
     {
         top: calc(50% - 30px);
     }
+
+    #miscGrid {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+      }
 }
   
   
