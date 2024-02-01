@@ -119,7 +119,7 @@ function PortfolioClick(clickObj)
         doc.body.style.position = "fixed";
         doc.body.style.scrollBehavior = "auto";
         
-        //SetIframeHeight(currentPortfolioContent);
+        SetIframeHeight(currentPortfolioContent);
 
         var tmpHeight = currentPortfolioContent.offsetHeight/2;
         currentPortfolioContent.style = "top: calc(50% - "+tmpHeight+"px);";
