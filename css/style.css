@@ -335,11 +335,24 @@ a:hover
     overflow:hidden;
 }
 
-#miscGrid {
+#miscGrid 
+{
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 50px;
-  }
+    grid-template-columns: auto auto auto auto;
+    /* gap: 50px; */
+}
+
+.twoWide_L
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.twoWide_R
+{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
 
 .carousel
 {
@@ -833,11 +846,17 @@ scrollbar-color: #0A4C95 #C2D2E4;
         top: calc(50% - 30px);
     }
 
-    #miscGrid {
+    #miscGrid 
+    {
         display: grid;
         grid-template-columns: auto;
-        gap: 20px;
-      }
+    }
+
+    .twoWide_L, .twoWide_R
+    {
+        grid-column-start: auto;
+        grid-column-end: auto;
+    }
 }
   
   
