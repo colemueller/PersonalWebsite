@@ -162,7 +162,8 @@ function navTo(el)
     var scrollToMe = doc.getElementById(el);
     var elementOffset = $(scrollToMe).offset().top;
 
-    var offset = (window.innerHeight/2) - scrollToMe.clientHeight/2;
+    //var offset = (window.innerHeight/2) - scrollToMe.clientHeight/2;
+    var offset = 140;
     var distance = elementOffset - offset;
     
     window.scroll({

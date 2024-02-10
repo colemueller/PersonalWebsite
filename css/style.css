@@ -131,7 +131,6 @@ a:hover
     border-radius: 5px;
     background-color: rgba(0,0,0,0.5);
     border:2px solid rgba(0,0,0,0.2);
-    /* margin: 50vh 0; */
     margin: 40vh 0;
     left:50%;
     transform: translateX(-50%);
@@ -142,6 +141,11 @@ a:hover
 .contentSection a:hover
 {
     text-decoration: underline;
+}
+
+.topSection
+{
+    margin-top: 28vh !important;
 }
 
 #about img
