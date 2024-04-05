@@ -51,12 +51,20 @@ function EasterClick()
     var result = gl instanceof WebGLRenderingContext
       ? "WebGl"
       : "!WebGl";
-    
-    if(winX > 1354 && winY > 1017 && result == "WebGl" && detectDeviceType() == 'Desktop')
+    //y: 1017
+    if(winX > 1354 && winY > 700 && result == "WebGl" && detectDeviceType() == 'Desktop')
     {
         var newFrame = doc.createElement("iframe");
         newFrame.setAttribute("src", "./BugSplat/index.html");
         newFrame.setAttribute("title", "Bug-Splat");
+        newFrame.onload = function()
+        {
+            let mql = window.matchMedia("(min-width: 0px) and (max-width: 1920px)");
+            if(mql.matches == true)
+            {
+                newFrame.contentWindow.document.getElementById("unityContainer").style = "width: 1024px; height: 576px";
+            }
+        };
         easterStage.appendChild(newFrame);
         bugsplatFrame = newFrame;
 
@@ -89,6 +97,9 @@ function PortfolioClick(clickObj)
     var thisContent = clickObj.getElementsByTagName("h2")[0].innerHTML;
     switch(thisContent)
     {
+        case "Solar System Sim":
+            currentPortfolioContent = doc.getElementById("solarDetail");
+            break;
         case "Gromelski &amp; Associates":
             currentPortfolioContent = doc.getElementById("gaiDetail");
             break;

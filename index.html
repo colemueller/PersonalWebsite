@@ -34,6 +34,9 @@
         <div class="nav box" onclick="navTo('portfolio')">
           <h2>Projects</h2>
         </div>
+        <div class="nav box" onclick="navTo('blog')">
+          <h2>Blog</h2>
+        </div>
         <div class="nav box" onclick="navTo('contact')">
           <h2>Contact</h2>
         </div>
@@ -50,6 +53,7 @@
 					<a onclick="navTo('about')">About</a>
 					<a onclick="navTo('services')">Skills</a>
 					<a onclick="navTo('portfolio')">Projects</a>
+					<a onclick="navTo('blog')">Blog</a>
 					<a onclick="navTo('contact')">Contact</a>
 					<!-- a onclick="navTo('links')">Links</a> -->
 					<a href="ColeMueller_Resume.pdf" target="_blank">Resume</a>
@@ -119,14 +123,17 @@
         <h2>PROJECTS</h2>
         <div id="portfolioContainer">
           <div class="portfolioRow">
+            <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/SolarSystemThumbnail.jpg')"><h2>Solar System Sim</h2></div>
             <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/gaiThumb.png')"><h2>Gromelski & Associates</h2></div>
-            <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/knex/knex_5.jpg')"><h2>K'NEX® 3D</h2></div>
             <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/thumbnail.png')"><h2>Groundless</h2></div>
           </div>
           <div class="portfolioRow">
+            <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/knex/knex_5.jpg')"><h2>K'NEX® 3D</h2></div>
             <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/moceanImg.JPG')"><h2>Mocean</h2></div>
-            <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/bebris_3.PNG')"><h2>Bebris</h2></div>
             <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/drippyThumb.png')"><h2>Drippy</h2></div>
+          </div>
+          <div class="portfolioRow">
+            <div onclick="PortfolioClick(this)" class="portfolioBox box" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/bebris_3.PNG')"><h2>Bebris</h2></div>
           </div>
           <div class="portfolioRow">
             <div onclick="PortfolioClick(this)" class="portfolioMiscBox smallBox" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url('./portfolio/musicRoom/FinalRender_1.jpg')"><h2>Miscellaneous</h2></div>
@@ -134,37 +141,19 @@
         </div>
       </div>
 
+      <!-- <div id="blog" class="contentSection">
+        <h2>BLOG</h2>
+        <h3>Post #1 - 2D Platformer Character Controller</h3>
+      </div> -->
+
       <div id="contact" class="contentSection">
         <h2>CONTACT</h2>
         <p>Shoot me an email at <a href="mailto:coleaaronmueller@gmail.com">coleaaronmueller@gmail.com</a></p>
-        <p>Call or text me at <a href="tel:970-576-4544">(970)576-4544</a>.</p>
         <p><a target="_blank" href="https://www.linkedin.com/in/coleaaronmueller/">Message me on LinkedIn</a>.</p>
-        <!-- <form> 
-          <input type="text" name="name" id="name" placeholder="Your name...">
-          <span id="nameErr"></span>
-          <input type="text" name="email" id="email" placeholder="Your email address...">
-          <span id="emailErr"></span>
-          <textarea name="message" id="message" placeholder="Your message..." style="min-height:100px; max-height: 400px; "></textarea>
-      
-          <button onclick="FormSubmit()" type="button" value="Submit" class="box">Submit</button>
-          <br>
-          <span id="submitReturn"></span>
-        </form> -->
       </div>
 
-      <!-- <div id="links" class="contentSection">
-        <h2>LINKS</h2>
-        <p>Here are a few other fantastic developers that might better meet your development goals and are over-all just super cool people.</p>
-        <ul>
-          <li><a target="_blank" href="https://www.linkedin.com/in/andrewbishop12/">Andrew Bishop - 3D character rigging</a></li>
-          <li><a target="_blank" href="https://gabrieldavis.format.com/">Gabriel Davis - 3D modeling, surfacing, and lighting</a></li>
-          <li><a target="_blank" href="https://justadog.itch.io/">Taylor Swietanski - game design, programming, prototyping, tech art</a></li>
-          <li><a target="_blank" href="https://linktr.ee/lasayloofficial">Bennett (Lasaylo) Mueller - electronic music</a></li>
-          <li><a target="_blank" href="https://shannons.artstation.com/">Shannon Sands - Concept Artist, Storyboard Artist, Animator</a></li>
-        </ul>
-      </div> -->
       <footer>
-        © <p id="thisYear">1996</p> Cole Mueller. All Rights Reserved. | <a target="_blank" href="https://github.com/colemueller"><img src="images/github.png"></a> | <a target="_blank" href="https://www.linkedin.com/in/coleaaronmueller/"><img src="images/linkedInIcon.png"></a> | <a target="_blank" href="https://pcpartpicker.com/b/DVGqqs">View my PC :)</a> | <div id="easterEgg" onclick="EasterClick()"></div>
+        © <p id="thisYear">1996</p> Cole Mueller. All Rights Reserved. | <a target="_blank" href="https://github.com/colemueller"><img src="images/github.png"></a> | <a target="_blank" href="https://colemueller.itch.io/"><img style="filter: invert(100%);" src="images/itchio-textless-black.svg"></a> | <a target="_blank" href="https://www.linkedin.com/in/coleaaronmueller/"><img src="images/linkedInIcon.png"></a> | <a target="_blank" href="https://pcpartpicker.com/b/DVGqqs">View my PC :)</a> | <div id="easterEgg" onclick="EasterClick()"></div>
       </footer>
     </div>
     
@@ -173,6 +162,20 @@
   <div id="portfolioStage" class="sticky" >
     <h2 class="closeBtn" onclick="PortfolioClose()">close</h2>
     <div id="portfolioContent" style="display:none;">
+
+      <div class="portfolioDetails" id="solarDetail" style="display: none;">
+        <div class="portfolioDetailGraphic">
+          <img style="width: 100%; height: auto;" src="./portfolio/SolarSystem.gif">
+        </div>
+        <div class="portfolioDetailText">
+          <h1>Solar System Simulation</h1>
+          <h2>spring 2024</h2>
+          <p>This was a short solo programming exercise focusing on code quality and overall polish while simulating a prototype-style task and timeline. The simulation focuses on accurate relative orbit and rotation times for the planets. I worked hard to write extendable code from the start and create a polished first-pass UX. Made with Unity.</p>
+          <p>View the simulation in your browser below.</p>
+          <button onclick="window.open('http:\/\/cole-mueller.com\/SolarSystem\/','_blank');" type="button" class="box">Launch</button>
+          <button onclick="window.open('https:\/\/github.com\/colemueller\/SolarSystem','_blank');" type="button" class="box">Code</button>
+        </div>
+      </div>
 
       <div class="portfolioDetails" id="gaiDetail" style="display: none;">
         <div class="portfolioDetailGraphic">
@@ -203,7 +206,7 @@
         </div>
         <div class="portfolioDetailText">
           <h1>K'NEX® 3D</h1>
-          <h2>Spring/summer - 2017</h2>
+          <h2>spring/summer - 2017</h2>
           <p>K'NEX® 3D was one of my primary projects while I was with K'NEX®. I maintained current product lines and added new products to the app. I also added developer features to streamline the addition and testing of new products in the app without needing to build and publish a new version.</p>
           <p>I also developed a WebGL version of the app to be embedded directly on the K'NEX® website that navigated the user directly to a specific product in the app based on the product page being viewed. I developed JavaScript features to communicate with the WEbGL app and customize the Unity WebGL player.</p>
           <p>Tools:</p>
@@ -223,7 +226,7 @@
         </div>
         <div class="portfolioDetailText">
           <h1>GROUNDLESS</h1>
-          <h2>winter 2017 - Fall 2018</h2>
+          <h2>winter 2017 - fall 2018</h2>
           <p>"Groundless" is a local multiplayer arena game with no ground! Players compete  by building and destroying the land they walk on.</p>
           <p>"Groundless" was shown at PAX East in 2018. I worked as one of the lead programmers and game designers. I designed and implemented core gameplay mechanics, as well as many of the effects and shaders. I also implemented many of the backend systems such as local 4-player input, menu navigation, and character animation states.</p>
           <p>"Groundless" is available on Steam, XBOX ONE, and the Windows 10 Store.</p>
